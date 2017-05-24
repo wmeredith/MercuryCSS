@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            var timerStart = Date.now();
+        </script>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Mercury CSS | A Fast Classless Stylesheet</title>
+        <meta name="description" content="Mercury CSS is a fast classless boilerplate stylesheet.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="manifest" href="favicon/manifest.json">
+        <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="css/min/normalize.min.css">
+        <link rel="stylesheet" href="css/min/mercury.min.css">
+    </head>
+    <body>
+        <div id="top">
+            <p style="text-align: center;">
+                <em>This page loaded in <span id="loadTimer" style="color: orangered;"></span> seconds.</em>
+            </p>
+            <div style='text-align: center;'>
+                <img alt="Mercury Wings" src="images/wings.png" title="Futuristic Wings" style="text-align:center; width: 300px; max-width: 50%;">
+            </div>
+            <h1 style="text-align:center;">Mercury CSS</h1>
+            <hr/>
+            <hr/>
+            <hr/>
+            <h2>Overview</h2>
+            <blockquote>
+                <p>I always knew I was a star, and now the rest of the world seems to agree with me.</p>
+                <p>&mdash;<a href="https://en.wikipedia.org/wiki/Freddie_Mercury" title="Freddie Mercury on Wikipedia, the free encyclopedia">Freddie Mercury</a></p>
+            </blockquote>
+            <p>
+                Mercury CSS is a tiny <em>classless</em> stylesheet built for SPEED. It hookes directly into HTML elements adding minimal modern styling focused on good typography, fast load times, and responsive design.
+            </p>
+            <p>
+                The Mercury CSS stylesheet is 4kb unminifed.
+            </p>
+            <p>
+                Mercury CSS is a good place to start and build upon for most modern web development. And it's a pretty good place to stop if you care <em>primarily</em> about legibility and speed.
+            </p>
+
+            <h2>Typography</h2>
+            <p>
+                As a classless css stylesheet, Mercury CSS is primarily concerned with great typography. Great in the sense that it is easy to read and you probably won't notice much else about it, not great in the sense that it will win an <a href="https://www.awwwards.com/awards-of-the-month/" title="The awards that recognize the talent and effort of the best web designers, developers and agencies in the world. (Ostensibly ;)">AWWWARD</a>.
+            </p>
+            <h4>Scale</h4>
+            <p>
+                The <a href="http://webtypography.net/3.1.1" title="The Elements of Typographic Style Applied to the Web - 3.1.1 Don’t compose without a scale">typographic scale</a> is modular with a base font size of 16.18px and all other sizes being a factor of that and harmonic multipler of 1.375.
+            </p>
+            <p>
+                <blockquote>
+                    <h1>Header 1</h1>
+                    <h2>Header 2</h2>
+                    <h3>Header 3</h3>
+                    <h4>Header 4</h4>
+                    <h5>Header 5</h5>
+                    <h6>Header 6</h6>
+                    <br/>
+                    <p>
+                        Body Copy <small>(16.18px)</small>
+                    </p>
+                    <p>
+                        <small>Small copy</small> <small>(11.76px)</small>
+                    </p>
+                </blockquote>
+            </p>
+            <h4>Code</h4>
+            <p>It's eating the world</p>
+            <div>
+                <pre><code>define m_hello() {
+    print "Hello, World.";
+}</code></pre>
+                <pre><code>for (var i = 1; i <= 100; i++) {
+    var expletive = '';
+    if (i % 3 === 0) expletive += 'Fizz';
+    if (i % 5 === 0) expletive += 'Buzz';
+    console.log(expletive || i);
+}</code></pre>
+            </div>
+            <h4>Lists</h4>
+            <h5>Unordered List</h5>
+            <ul>
+                <li>
+                    First
+                </li>
+                <li>
+                    First Loser
+                </li>
+                <li>
+                    Third
+                </li>
+                <li>
+                    Fourth
+                </li>
+                <li>
+                    Fifth
+                </li>
+            </ul>
+            <h5>Ordered List</h5>
+            <ol>
+                <li>
+                    Partridge in a Pear Tree
+                </li>
+                <li>
+                    Turtle Doves
+                </li>
+                <li>
+                    French Hens
+                </li>
+                <li>
+                    Calling Birds
+                </li>
+                <li>
+                    Gooolden Riiings
+                </li>
+            </ol>
+            <h5>Nested List</h5>
+            <p>
+                Fight or Flight response breakdown:
+            </p>
+            <ul>
+                <li>
+                    Chemical Reaction
+                    <ol>
+                        <li>
+                            Amygdala triggers neural response in the hypothalamus
+                        </li>
+                        <li>
+                            Activation of pituitary gland and secretion of the ACTH (hormone)
+                        </li>
+                        <li>
+                            Adrenal gland activated almost simultaneously, releasing epinephrine (hormone)
+                        </li>
+                        <li>
+                            Chemical messenger release results in production of cortisol (hormone)
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    Physical Result
+                    <ul>
+                        <li>
+                            Acceleration of heart/lung action
+                        </li>
+                        <li>
+                            Digestion slows/stops
+                        </li>
+                        <li>
+                            Metabolic energy sources freed for muscles
+                            <ol>
+                                <li>
+                                    Fat
+                                </li>
+                                <li>
+                                    Glycogen
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            Dilation of blood vessels for muscles
+                        </li>
+                        <li>
+                            Constriction of other blood vessels
+                        </li>
+                        <li>
+                            Pupils dialate
+                        </li>
+                        <li>
+                            Hearing loss occurs
+                        </li>
+                        <li>
+                            Tunnel vision
+                        </li>
+                        <li>
+                            Shaking
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <h2>Hyperlinks</h2>
+            <p>
+                Styled throughout. They look like <a href="https://duckduckgo.com/" title="DuckDuckGo is the search engine that doesn't track you.">this link</a> to DuckDuckGo, a search engine that respects your&nbsp;privacy.
+            </p>
+            <h2>Tables</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th align="left">Type</th>
+                        <th align="left">Setting</th>
+                        <th align="left">Use</th>
+                        <th align="right">Seats</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td align="left">Picnic</td>
+                        <td align="left">Park</td>
+                        <td align="left">BBQ</td>
+                        <td align="right">4-6</td>
+                    </tr>
+                    <tr>
+                        <td align="left">Kitchen</td>
+                        <td align="left">Home</td>
+                        <td align="left">Eating</td>
+                        <td align="right">4</td>
+                    </tr>
+                    <tr>
+                        <td align="left">High Top</td>
+                        <td align="left">Bar</td>
+                        <td align="left">Mingling</td>
+                        <td align="right">3</td>
+                    </tr>
+                    <tr>
+                        <td align="left">Dining</td>
+                        <td align="left">Formal Dining Room</td>
+                        <td align="left">???</td>
+                        <td align="right">6-8</td>
+                    </tr>
+                    <tr>
+                        <td align="left">Ping Pong</td>
+                        <td align="left">Frat</td>
+                        <td align="left">Drinking Games</td>
+                        <td align="right">43</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="text-align: center;">
+                <em>A Table Table</em>
+            </p>
+            <h2>Images</h2>
+            <p>Images are responsive:</p>
+            <div>
+                <img alt="example image" src="images/freddie_cat.jpg" title="An exemplary image">
+                <p style="text-align: center;">
+                    <em><a href="https://duckduckgo.com/?q=freddie+mercury+and+a+cat&iax=1&ia=images" title="He loves it.">Freddie Mercury and cat</a></em>
+                </p>
+            </div>
+            <h2>Form Elements</h2>
+            <form>
+                <fieldset>
+                    <legend>Input Fields</legend>
+                    <p><label for="m_text">Text</label> <input id="m_text" type="text"></p>
+                    <p><label for="m_password">HTML5 Password</label> <input id="m_password" type="password"></p>
+                    <p><label for="m_webaddress">HTML5 Web Address</label> <input id="m_webaddress" type="url"></p>
+                    <p><label for="m_emailaddress">HTML5 Email Address</label> <input id="m_emailaddress" type="email"></p>
+                    <p><label for="m_phone">HTML5 Phone Number</label> <input id="m_phone" type="tel"></p>
+                    <p><label for="m_search">HTML5 Search</label> <input id="m_search" type="search"></p>
+                    <p><label for="m_text2">HTML5 Number</label> <input id="m_text2" type="number"></p>
+                    <p>
+                        Note: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-placeholder" title="Learn more about placeholders.">Placeholders</a> are <a href="https://www.nngroup.com/articles/form-design-placeholders/" title="Placeholders in Form Fields Are Harmful">not recommended</a>.
+                    </p>
+                </fieldset>
+                <fieldset id="forms__select">
+                    <legend>Selects</legend>
+                    <p>
+                        <label for="select">Select</label>
+                        <select id="select">
+                            <optgroup label="Option Group">
+                                <option>
+                                    Picky
+                                </option>
+                                <option>
+                                    Choosy
+                                </option>
+                                <option>
+                                    Finicky
+                                </option>
+                                <option>
+                                    Particular
+                                </option>
+                                <option>
+                                    Refined
+                                </option>
+                            </optgroup>
+                        </select>
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Checkboxes</legend>
+                    <p>
+                        <label for="m_checkbox1"><input checked="checked" id="m_checkbox1" name="m_checkbox1" type="checkbox">&nbsp;&nbsp;Mustard</label>
+                    </p>
+                    <p>
+                        <label for="m_checkbox2"><input id="m_checkbox2" name="m_checkbox2" type="checkbox">&nbsp;&nbsp;Relish</label>
+                    </p>
+                    <p>
+                        <label for="m_checkbox3"><input id="m_checkbox3" name="m_checkbox3" type="checkbox">&nbsp;&nbsp;Ketchup</label>
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Radio Buttons</legend>
+                    <label for="m_radio">Cake</label>
+                    <p>
+                        <label for="m_radio__have"><input checked="checked" type="radio" name="m_radio" id="m_radio__have" value="have">&nbsp;&nbsp;Have it.</label>
+                    </p>
+                    <p>
+                        <label for="m_radio__eat"><input type="radio" name="m_radio" id="m_radio__eat" value="eat">&nbsp;&nbsp;Eat it.</label>
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Textareas</legend>
+                    <p>
+                        <label for="m_textarea">Textarea</label>
+                        <textarea cols="42" id="m_textarea" placeholder="Enter your message here. (Brevity is the soul of wit.)" rows="7"></textarea>
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Action Inputs</legend>
+                    <p>
+                        <input type="submit" value="Submit">&nbsp;&nbsp;<code>&lt;input type="submit"&gt;</code>
+                    </p>
+                    <p>
+                        <input type="button" value="Do Something">&nbsp;&nbsp;<code>&lt;input type="button"&gt;</code>
+                    </p>
+                    <p>
+                        <input type="reset" value="Reset">&nbsp;&nbsp;<code>&lt;input type="reset"&gt;</code>
+                    </p>
+                    <p>
+                        <input disabled="" type="submit" value="disabled input">&nbsp;&nbsp;<code>&lt;input disabled type="submit"&gt;</code>
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Buttons</legend>
+                    <p>
+                        <button type="submit">Submit</button>&nbsp;&nbsp;<code>&lt;button type="submit"&gt;</code>
+                    </p>
+                    <p>
+                        <button type="button">Do Something</button>&nbsp;&nbsp;<code>&lt;button type="button"&gt;</code>
+                    </p>
+                    <p>
+                        <button type="reset">Reset</button>&nbsp;&nbsp;<code>&lt;button type="reset"&gt;</code>
+                    </p>
+                    <p>
+                        <button disabled type="button">Disabled Button</button>&nbsp;&nbsp;<code>&lt;button disabled type="button"&gt;</code>
+                    </p>
+                </fieldset>
+            </form>
+            <br />
+            <p style="text-align: center;">
+                <a href="#top" title="Back to top.">Back to top. &#9757;</a>
+            </p>
+            <br />
+            <hr />
+            <p style="text-align:center;">
+                <br />
+                &#9791;&nbsp;&#9791;&nbsp;&#9791;
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+            </p>
+        </div>
+        <script type="text/javascript">
+            window.onload = function () {
+                var loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart;
+                var timeDisplay = (loadTime/1000).toFixed(3);
+                document.getElementById("loadTimer").innerHTML = timeDisplay;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,294 @@
+/*! mercury.css v1.0 | MIT License | https://github.com/wmeredith/MercuryCSS */
+//
+// Scale/Contrast Factor
+//
+$m_harmonic: 1.325;
+
+//
+// Color
+//
+$m_color-bg: #FBFBFB;
+$m_color-text: #222;
+$m_color-link: #1F5AFF;
+$m_color-link-visited: #9D32FF;
+$m_color-error: #FC2B07; // orangered
+$m_color-border: lighten($m_color-text, $m_harmonic * 33);
+
+$m_font-color-base: $m_color-text;
+
+//
+// Typeface
+//
+$m_typeface-serif: "Georgia", serif;
+$m_typeface-sans: "Verdana", sans-serif;
+$m_typeface-mono: "Courier New", monospace;
+
+//
+// Font
+//
+$m_font-size-base: 1.618rem;
+$m_font-size-h6: $m_font-size-base / $m_harmonic;
+$m_font-size-h5: $m_font-size-base;
+$m_font-size-h4: $m_font-size-h5 * $m_harmonic;
+$m_font-size-h3: $m_font-size-h4 * $m_harmonic;
+$m_font-size-h2: $m_font-size-h3 * $m_harmonic;
+$m_font-size-h1: $m_font-size-h2 * $m_harmonic;
+
+$m_font-weight-light: 200;
+$m_font-weight-base: 400;
+$m_font-weight-heavy: 600;
+
+//
+// Core
+//
+html {
+    font-family: $m_typeface-serif;
+    font-size: 62.5%; // 10px on most browsers
+}
+
+body {
+    background-color: $m_color-bg;
+    color: $m_color-text;
+    font-size: $m_font-size-base; // Must be a rem value
+    font-weight: $m_font-weight-base;
+    line-height: $m_harmonic;
+    margin: auto;
+    max-width: 90%;
+    padding: $m_harmonic;
+    width: 42em;
+}
+
+//
+// Typography
+//
+@mixin word-wrap() {
+    hyphens: auto;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+}
+
+// Large
+h1, h2, h3, h4, h5, h6 {
+    @include word-wrap;
+    font-family: $m_typeface-sans;
+    font-weight: $m_font-weight-heavy;
+    letter-spacing: .05em;
+    line-height: $m_harmonic;
+    margin: .66em 0 0;
+}
+
+h1 { font-size: $m_font-size-h1 }
+h2 { font-size: $m_font-size-h2 }
+h3 { font-size: $m_font-size-h3 }
+h4 { font-size: $m_font-size-h4 }
+h5 { font-size: $m_font-size-h5 }
+h6 { font-size: $m_font-size-h6 }
+
+// Small
+small, sub, sup, caption {
+    font-size: $m_font-size-h6;
+    font-weight: $m_font-weight-base;
+    letter-spacing: 0;
+}
+
+// Links
+a {
+    border-bottom: 1px dotted $m_color-link;
+    color: $m_color-link;
+    text-decoration: none;
+
+    &:hover {
+        border-bottom: 1px solid $m_color-link;
+    }
+
+    &:visited {
+        border-bottom: 1px dotted $m_color-link-visited;
+        color: $m_color-link-visited;
+    }
+}
+
+//
+// Embellishments
+//
+p {
+    margin-bottom: 1em * $m_harmonic;
+}
+
+b, strong {
+    font-weight: $m_font-weight-heavy;
+}
+
+i, em {
+    font-style: italic;
+}
+
+ul, ol {
+    padding-left: 1em * ($m_harmonic * 2);
+
+    ul, ol {
+        padding-bottom: 0;
+        padding-top: 1em * ($m_harmonic / 2);
+    }
+}
+
+li {
+    margin-bottom: 1em * ($m_harmonic / 2);
+}
+
+blockquote {
+    border-left: 1px solid $m_color-border;
+    margin-bottom: 1em * $m_harmonic;
+    margin-left: 1em * ($m_harmonic / 2);
+    padding-left: 1em * $m_harmonic;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid $m_color-border;
+}
+
+pre {
+    background-color: darken($m_color-bg, $m_harmonic * 5);
+    color: #000;
+    display: block;
+    overflow-x: auto;
+    padding: 1em * ($m_harmonic);
+}
+
+code {
+    color: #000;
+    white-space: pre-wrap;
+}
+
+pre > code {
+    background-color: transparent;
+    padding: 0;
+    white-space: pre;
+}
+
+//
+// Images
+//
+img {
+    max-width: 100%;
+}
+
+//
+// Tables
+//
+table {
+    border-collapse: collapse;
+    text-align: justify;
+    width: 100%;
+}
+
+th {
+    border-bottom: 1px solid $m_color-border;
+    font-family: $m_typeface-sans;
+    padding: (1em * $m_harmonic / 2) (1em * ($m_harmonic / 2));
+    @extend h5;
+}
+
+td {
+    padding: (1em * $m_harmonic / 3) (1em * ($m_harmonic / 2));
+}
+
+tbody {
+    tr {
+        border-bottom: 1px solid lighten($m_color-border, $m_harmonic * 20);
+
+        &:last-of-type {
+            border: 0;
+        }
+    }
+}
+
+//
+// Input
+//
+input, textarea {
+    border: 1px solid $m_color-text;
+
+    &:focus {
+        border: 1px solid $m_color-link;
+    }
+}
+
+textarea {
+    width: 100%;
+}
+
+textarea, select, input[type] {
+    color: $m_color-text;
+    padding: 1em * $m_harmonic / 3;
+    margin-bottom: 1em * $m_harmonic / 2;
+    background-color: #FFF;
+    border: 1px solid darken($m_color-bg, $m_harmonic * 5);
+    border-radius: 2px;
+    box-shadow: 0;
+    box-sizing: border-box;
+
+    &:focus {
+        border: 1px solid $m_color-link;
+        outline: 0;
+    }
+}
+
+input:invalid {
+    border: 1px solid $m_color-error;
+    outline: 0;
+}
+
+label, legend, fieldset {
+    display: block;
+}
+
+label {
+    margin-bottom: 1em * ($m_harmonic / 4);
+}
+
+fieldset {
+    @extend p;
+    border-radius: 4px;
+    box-shadow: 0 2px 3px -1px rgba($m_color-text, .1);
+}
+
+.button, button, input[type="submit"], input[type="reset"], input[type="button"] {
+    $m_button-color: lighten($m_color-link, $m_harmonic * 6);
+    background-color: $m_button-color;
+    border: 1px solid darken($m_button-color, $m_harmonic * 10);
+    border-radius: 4px;
+    box-shadow: 0 3px 4px -2px rgba($m_color-text, .5);
+    box-sizing: border-box;
+    color: #FFF;
+    cursor: pointer;
+    display: inline-block;
+    padding: 1em * ($m_harmonic / 3) 1em * ($m_harmonic / 2);
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    &:focus, &:hover {
+        background-color: darken($m_button-color, $m_harmonic * 4);
+        border-color: darken($m_button-color, $m_harmonic * 20);
+        outline: 0;
+    }
+
+    &[disabled] {
+        box-shadow: none;
+        cursor: default;
+        opacity: .5;
+
+        &:hover {
+            background-color: $m_button-color;
+            border-color: darken($m_button-color, $m_harmonic * 6);
+            cursor: default;
+        }
+    }
+}
