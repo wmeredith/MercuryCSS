@@ -17,6 +17,7 @@ gulp.task('sass', function() {
     return gulp.src('scss/**/*.scss')
         .pipe(sass())
         .pipe(gulp.dest('css'))
+        .pipe(gulp.dest('dist'))
         .pipe(browserSync.reload({
             stream: true
         }))
