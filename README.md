@@ -1,11 +1,11 @@
 # MercuryCSS
 A fast _classless_ stylesheet boilerplate focused on typography.
 
-<p style="text-align: center; box-shadow: 0 2px 2px 2px rgba(0,0,0,.1)">
+<p style="text-align: center;">
     <a href="https://wmeredith.github.io/MercuryCSS/" title="Mercury CSS Demo"><img style="width: 60%" src="images/Mercury_CSS_Screenshot.png" /></a>
 </p>
 
-<p style="text-align: center"><em><a href="https://wmeredith.github.io/MercuryCSS/" title="Mercury CSS Demo">View Demo</a></em></p>
+<p style="text-align: center"><a href="https://wmeredith.github.io/MercuryCSS/" title="Mercury CSS Demo">View Demo</a></p>
 
 ## Who is this for?
 This is for someone looking for a minimal stylesheet focused on typography and speed. Either as a starting point for something grander, or as an end point for something highly focused.
