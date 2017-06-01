@@ -6,7 +6,7 @@ A fast _classless_ stylesheet boilerplate focused on typography.
         <a href="https://wmeredith.github.io/MercuryCSS/" title="Mercury CSS Demo"><img style="width: 77%" src="images/Mercury_CSS_Screenshot.png"></a>
     </p>
 
-    ___<a href="https://wmeredith.github.io/MercuryCSS/" title="Mercury CSS Demo">View Demo</a>___
+    <em><a href="https://wmeredith.github.io/MercuryCSS/" title="Mercury CSS Demo">View Demo</a></em>
 </div>
 
 ## Who is this for?
