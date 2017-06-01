@@ -1,7 +1,7 @@
 # MercuryCSS
 A fast _classless_ stylesheet boilerplate focused on typography.
 
-<p style="text-align: center">
+<p style="text-align: center; box-shadow: 0 2px 2px 2px rgba(0,0,0,.1)">
     <a href="https://wmeredith.github.io/MercuryCSS/" title="Mercury CSS Demo"><img style="width: 60%" src="images/Mercury_CSS_Screenshot.png" /></a>
 </p>
 
