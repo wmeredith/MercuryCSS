@@ -18,6 +18,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Wade Meredith",
+  "author": "Wade Meredith | wademeredith.com",
   "license": "MIT"
 }
