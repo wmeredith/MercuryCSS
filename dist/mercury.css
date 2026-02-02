@@ -31,6 +31,7 @@
   --m-button-border: rgb(3.97, 70.0895089286, 255);
   --m-button-border-hover: rgb(0, 50.4120758929, 191.395);
   --m-button-shadow: 0 3px 4px -2px rgba(#222, .5);
+  --m-button-text: #FFF;
   --m-mark-bg: #fff3cd;
 }
 
@@ -360,7 +361,7 @@ progress::-moz-progress-bar {
   border-radius: 4px;
   box-shadow: var(--m-button-shadow);
   box-sizing: border-box;
-  color: #FFF;
+  color: var(--m-button-text);
   cursor: pointer;
   display: inline-block;
   padding: 0.4416666667em 0.6625em;

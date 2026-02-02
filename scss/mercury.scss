@@ -85,6 +85,7 @@ $m_font-weight-heavy: 600;
     --m-button-border: #{color.adjust($m_button-color, $lightness: -($m_harmonic * 10) * 1%)};
     --m-button-border-hover: #{color.adjust($m_button-color, $lightness: -($m_harmonic * 20) * 1%)};
     --m-button-shadow: 0 3px 4px -2px rgba(#{$m_color-text}, .5);
+    --m-button-text: #FFF;
 
     // Mark highlight
     --m-mark-bg: #fff3cd;
@@ -464,7 +465,7 @@ progress {
     border-radius: 4px;
     box-shadow: var(--m-button-shadow);
     box-sizing: border-box;
-    color: #FFF;
+    color: var(--m-button-text);
     cursor: pointer;
     display: inline-block;
     padding: 1em * math.div($m_harmonic, 3) 1em * math.div($m_harmonic, 2);
