@@ -59,7 +59,7 @@ MercuryCSS exposes its design tokens as CSS custom properties, so you can overri
 MercuryCSS is designed so its consumer **does not need any extra tooling**. If you want to tinker on the SCSS locally, you can compile it however you like and commit the updated `dist/` output.
 
 ## Why?
-I've been designing tech stuff for two decades now (sheesh). I've needed something like this more times than I can count. So I'm maintaining it here. This is as much for personal use as public. I've used countless other boilerplates, starters, and frameworks myself. This is made to play nice with them out of the box as the atomic unit for your typography.
+I've been designing and programming for two decades now (sheesh). I've needed something like this more times than I can count. So I'm maintaining it here. This is as much for personal use as public. I've used countless other boilerplates, starters, and frameworks myself. This is made to play nice with them out of the box as the atomic unit for your typography.
 
 ## Else
 LMK if you like/hate/use it... <a href="http://wademeredith.com" title="Wade Meredith - Designer+Programmer in Kansas City.">WadeMeredith.com</a>
