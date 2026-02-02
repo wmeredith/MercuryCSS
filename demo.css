@@ -1,0 +1,70 @@
+/* Demo page styles - not part of the Mercury CSS framework */
+
+/* Hero section */
+.demo-hero {
+    text-align: center;
+}
+
+.demo-hero-image {
+    max-width: 50%;
+    width: 300px;
+}
+
+.demo-hero h1 {
+    text-align: center;
+}
+
+/* Load timer */
+#loadTimer {
+    color: orangered;
+}
+
+/* Captions */
+.demo-caption {
+    text-align: center;
+}
+
+/* Footer */
+.demo-footer {
+    text-align: center;
+}
+
+/* Dark mode fix for wings image */
+@media (prefers-color-scheme: dark) {
+    .demo-hero-image {
+        filter: brightness(2);
+    }
+}
+
+/* GitHub corner - third party styles */
+.github-corner svg {
+    fill: #1F5AFF;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    border: 0;
+    right: 0;
+}
+
+.github-corner .octo-arm {
+    transform-origin: 130px 106px;
+}
+
+.github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+}
+
+@keyframes octocat-wave {
+    0%, 100% { transform: rotate(0); }
+    20%, 60% { transform: rotate(-25deg); }
+    40%, 80% { transform: rotate(10deg); }
+}
+
+@media (max-width: 500px) {
+    .github-corner:hover .octo-arm {
+        animation: none;
+    }
+    .github-corner .octo-arm {
+        animation: octocat-wave 560ms ease-in-out;
+    }
+}
