@@ -231,7 +231,7 @@ i, em {
 }
 
 ul, ol {
-    padding-left: 1em * ($m_harmonic * 2);
+    padding-inline-start: 1em * ($m_harmonic * 2);
 
     ul, ol {
         padding-bottom: 0;
@@ -244,10 +244,10 @@ li {
 }
 
 blockquote {
-    border-left: 1px solid var(--m-color-border);
+    border-inline-start: 1px solid var(--m-color-border);
     margin-bottom: 1em * $m_harmonic;
-    margin-left: 1em * math.div($m_harmonic, 2);
-    padding-left: 1em * $m_harmonic;
+    margin-inline-start: 1em * math.div($m_harmonic, 2);
+    padding-inline-start: 1em * $m_harmonic;
 }
 
 hr {
@@ -426,7 +426,7 @@ dt {
 
 dd {
     margin-bottom: 1em * math.div($m_harmonic, 2);
-    margin-left: 1em * $m_harmonic;
+    margin-inline-start: 1em * $m_harmonic;
 }
 
 meter, progress {
@@ -489,5 +489,39 @@ progress {
             border-color: var(--m-button-border);
             cursor: default;
         }
+    }
+}
+
+//
+// Print
+//
+@media print {
+    body {
+        background: #FFF;
+        color: #000;
+        max-width: none;
+        width: 100%;
+    }
+
+    a[href]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.85em;
+    }
+
+    pre, blockquote {
+        page-break-inside: avoid;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+        page-break-inside: avoid;
+    }
+
+    .button, button, input[type="submit"], input[type="reset"], input[type="button"] {
+        box-shadow: none;
     }
 }

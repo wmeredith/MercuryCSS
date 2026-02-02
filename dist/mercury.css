@@ -155,7 +155,7 @@ i, em {
 }
 
 ul, ol {
-  padding-left: 2.65em;
+  padding-inline-start: 2.65em;
 }
 ul ul, ul ol, ol ul, ol ol {
   padding-bottom: 0;
@@ -167,10 +167,10 @@ li {
 }
 
 blockquote {
-  border-left: 1px solid var(--m-color-border);
+  border-inline-start: 1px solid var(--m-color-border);
   margin-bottom: 1.325em;
-  margin-left: 0.6625em;
-  padding-left: 1.325em;
+  margin-inline-start: 0.6625em;
+  padding-inline-start: 1.325em;
 }
 
 hr {
@@ -328,7 +328,7 @@ dt {
 
 dd {
   margin-bottom: 0.6625em;
-  margin-left: 1.325em;
+  margin-inline-start: 1.325em;
 }
 
 meter, progress {
@@ -383,4 +383,30 @@ progress::-moz-progress-bar {
   background-color: var(--m-button-bg);
   border-color: var(--m-button-border);
   cursor: default;
+}
+
+@media print {
+  body {
+    background: #FFF;
+    color: #000;
+    max-width: none;
+    width: 100%;
+  }
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+  pre, blockquote {
+    page-break-inside: avoid;
+  }
+  h1, h2, h3, h4, h5, th, h6 {
+    page-break-after: avoid;
+  }
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+  .button, button, input[type=submit], input[type=reset], input[type=button] {
+    box-shadow: none;
+  }
 }
