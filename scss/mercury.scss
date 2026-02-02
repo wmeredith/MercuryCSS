@@ -75,6 +75,8 @@ $m_font-weight-heavy: 600;
     --m-body-padding: #{$m_harmonic * 1rem};
 
     --m-color-code-bg: #{color.adjust($m_color-bg, $lightness: -($m_harmonic * 5) * 1%)};
+    --m-color-code-text: #000;
+    --m-color-input-bg: #FFF;
 
     // Buttons
     $m_button-color: color.adjust($m_color-link, $lightness: ($m_harmonic * 6) * 1%);
@@ -83,6 +85,42 @@ $m_font-weight-heavy: 600;
     --m-button-border: #{color.adjust($m_button-color, $lightness: -($m_harmonic * 10) * 1%)};
     --m-button-border-hover: #{color.adjust($m_button-color, $lightness: -($m_harmonic * 20) * 1%)};
     --m-button-shadow: 0 3px 4px -2px rgba(#{$m_color-text}, .5);
+
+    // Mark highlight
+    --m-mark-bg: #fff3cd;
+}
+
+//
+// Dark Mode
+//
+@media (prefers-color-scheme: dark) {
+    $m_color-bg-dark: #1a1a2e;
+    $m_color-text-dark: #e8e8e8;
+    $m_color-link-dark: #7aa2ff;
+    $m_color-link-visited-dark: #c08bff;
+
+    :root {
+        --m-color-bg: #{$m_color-bg-dark};
+        --m-color-text: #{$m_color-text-dark};
+        --m-color-link: #{$m_color-link-dark};
+        --m-color-link-visited: #{$m_color-link-visited-dark};
+        --m-color-border: #{color.adjust($m_color-text-dark, $lightness: -($m_harmonic * 20) * 1%)};
+        --m-color-code-bg: #{color.adjust($m_color-bg-dark, $lightness: ($m_harmonic * 5) * 1%)};
+        --m-color-code-text: #{$m_color-text-dark};
+        --m-color-input-bg: #{color.adjust($m_color-bg-dark, $lightness: ($m_harmonic * 3) * 1%)};
+
+        // Buttons (dark)
+        $m_button-color-dark: color.adjust($m_color-link-dark, $lightness: -($m_harmonic * 6) * 1%);
+        --m-button-bg: #{$m_button-color-dark};
+        --m-button-bg-hover: #{color.adjust($m_button-color-dark, $lightness: ($m_harmonic * 6) * 1%)};
+        --m-button-border: #{color.adjust($m_button-color-dark, $lightness: -($m_harmonic * 10) * 1%)};
+        --m-button-border-hover: #{color.adjust($m_button-color-dark, $lightness: ($m_harmonic * 5) * 1%)};
+        --m-button-shadow: 0 3px 4px -2px rgba(0, 0, 0, .5);
+
+        // Mark highlight (dark)
+        --m-mark-bg: #5c4d1a;
+    }
+
 }
 
 //
@@ -218,14 +256,14 @@ hr {
 
 pre {
     background-color: var(--m-color-code-bg);
-    color: #000;
+    color: var(--m-color-code-text);
     display: block;
     overflow-x: auto;
     padding: 1em * ($m_harmonic);
 }
 
 code {
-    color: #000;
+    color: var(--m-color-code-text);
     white-space: pre-wrap;
 }
 
@@ -291,7 +329,7 @@ textarea, select, input[type] {
     color: var(--m-color-text);
     padding: math.div(1em * $m_harmonic, 3);
     margin-bottom: math.div(1em * $m_harmonic, 2);
-    background-color: #FFF;
+    background-color: var(--m-color-input-bg);
     border: 1px solid color.adjust($m_color-bg, $lightness: -($m_harmonic * 5) * 1%);
     border-radius: 2px;
     box-shadow: 0;
@@ -347,7 +385,7 @@ summary {
 }
 
 mark {
-    background-color: #fff3cd;
+    background-color: var(--m-mark-bg);
     border-radius: 2px;
     padding: 0.1em 0.3em;
 }

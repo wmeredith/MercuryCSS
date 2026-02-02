@@ -24,13 +24,34 @@
   --m-body-width: 42em;
   --m-body-padding: 1.325rem;
   --m-color-code-bg: rgb(234.10625, 234.10625, 234.10625);
+  --m-color-code-text: #000;
+  --m-color-input-bg: #FFF;
   --m-button-bg: rgb(71.545, 119.8657366071, 255);
   --m-button-bg-hover: rgb(44.515, 99.9552455357, 255);
   --m-button-border: rgb(3.97, 70.0895089286, 255);
   --m-button-border-hover: rgb(0, 50.4120758929, 191.395);
   --m-button-shadow: 0 3px 4px -2px rgba(#222, .5);
+  --m-mark-bg: #fff3cd;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --m-color-bg: #1a1a2e;
+    --m-color-text: #e8e8e8;
+    --m-color-link: #7aa2ff;
+    --m-color-link-visited: #c08bff;
+    --m-color-border: rgb(164.425, 164.425, 164.425);
+    --m-color-code-bg: rgb(38.2010416667, 38.2010416667, 67.5864583333);
+    --m-color-code-text: #e8e8e8;
+    --m-color-input-bg: rgb(33.320625, 33.320625, 58.951875);
+    --m-button-bg: rgb(81.455, 133.6489849624, 255);
+    --m-button-bg-hover: #7aa2ff;
+    --m-button-border: rgb(13.88, 86.3972932331, 255);
+    --m-button-border-hover: rgb(115.2425, 157.2748308271, 255);
+    --m-button-shadow: 0 3px 4px -2px rgba(0, 0, 0, .5);
+    --m-mark-bg: #5c4d1a;
+  }
+}
 :focus-visible {
   outline: 2px solid var(--m-color-link);
   outline-offset: 2px;
@@ -158,14 +179,14 @@ hr {
 
 pre {
   background-color: var(--m-color-code-bg);
-  color: #000;
+  color: var(--m-color-code-text);
   display: block;
   overflow-x: auto;
   padding: 1.325em;
 }
 
 code {
-  color: #000;
+  color: var(--m-color-code-text);
   white-space: pre-wrap;
 }
 
@@ -217,7 +238,7 @@ textarea, select, input[type] {
   color: var(--m-color-text);
   padding: 0.4416666667em;
   margin-bottom: 0.6625em;
-  background-color: #FFF;
+  background-color: var(--m-color-input-bg);
   border: 1px solid rgb(234.10625, 234.10625, 234.10625);
   border-radius: 2px;
   box-shadow: 0;
@@ -266,7 +287,7 @@ summary:hover {
 }
 
 mark {
-  background-color: #fff3cd;
+  background-color: var(--m-mark-bg);
   border-radius: 2px;
   padding: 0.1em 0.3em;
 }
