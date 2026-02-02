@@ -1,18 +1,52 @@
-/*! mercury.css v1.0 | MIT License | https://github.com/wmeredith/MercuryCSS */
+/*! mercury.css v1.0.2 | MIT License | https://github.com/wmeredith/MercuryCSS */
+:root {
+  --m-harmonic: 1.325;
+  --m-color-bg: #FBFBFB;
+  --m-color-text: #222;
+  --m-color-link: #1F5AFF;
+  --m-color-link-visited: #9D32FF;
+  --m-color-error: #FC2B07;
+  --m-color-border: rgb(145.49875, 145.49875, 145.49875);
+  --m-font-family-serif: Georgia, serif;
+  --m-font-family-sans: Verdana, sans-serif;
+  --m-font-family-mono: Courier New, monospace;
+  --m-font-size-base: 1.618rem;
+  --m-font-size-h6: 1.2211320755rem;
+  --m-font-size-h5: 1.618rem;
+  --m-font-size-h4: 2.14385rem;
+  --m-font-size-h3: 2.84060125rem;
+  --m-font-size-h2: 3.7637966562rem;
+  --m-font-size-h1: 4.9870305695rem;
+  --m-font-weight-light: 200;
+  --m-font-weight-base: 400;
+  --m-font-weight-heavy: 600;
+  --m-body-max-width: 90%;
+  --m-body-width: 42em;
+  --m-body-padding: 1.325rem;
+  --m-color-code-bg: rgb(234.10625, 234.10625, 234.10625);
+  --m-button-bg: rgb(71.545, 119.8657366071, 255);
+  --m-button-bg-hover: rgb(44.515, 99.9552455357, 255);
+  --m-button-border: rgb(3.97, 70.0895089286, 255);
+  --m-button-border-hover: rgb(0, 50.4120758929, 191.395);
+  --m-button-shadow: 0 3px 4px -2px rgba(#222, .5);
+}
+
 html {
-  font-family: "Georgia", serif;
-  font-size: 62.5%; }
+  font-family: var(--m-font-family-serif);
+  font-size: 62.5%;
+}
 
 body {
-  background-color: #FBFBFB;
-  color: #222;
-  font-size: 1.618rem;
-  font-weight: 400;
-  line-height: 1.325;
+  background-color: var(--m-color-bg);
+  color: var(--m-color-text);
+  font-size: var(--m-font-size-base);
+  font-weight: var(--m-font-weight-base);
+  line-height: var(--m-harmonic);
   margin: auto;
-  max-width: 90%;
-  padding: 1.325;
-  width: 42em; }
+  max-width: var(--m-body-max-width);
+  padding: var(--m-body-padding);
+  width: var(--m-body-width);
+}
 
 h1, h2, h3, h4, h5, th, h6 {
   hyphens: auto;
@@ -23,168 +57,209 @@ h1, h2, h3, h4, h5, th, h6 {
   -ms-hyphens: auto;
   -moz-hyphens: auto;
   -webkit-hyphens: auto;
-  font-family: "Verdana", sans-serif;
-  font-weight: 600;
-  letter-spacing: .05em;
-  line-height: 1.325;
-  margin: .66em 0 0; }
+  font-family: var(--m-font-family-sans);
+  font-weight: var(--m-font-weight-heavy);
+  letter-spacing: 0.05em;
+  line-height: var(--m-harmonic);
+  margin: 0.66em 0 0;
+}
 
 h1 {
-  font-size: 4.98703rem; }
+  font-size: var(--m-font-size-h1);
+}
 
 h2 {
-  font-size: 3.7638rem; }
+  font-size: var(--m-font-size-h2);
+}
 
 h3 {
-  font-size: 2.8406rem; }
+  font-size: var(--m-font-size-h3);
+}
 
 h4 {
-  font-size: 2.14385rem; }
+  font-size: var(--m-font-size-h4);
+}
 
 h5, th {
-  font-size: 1.618rem; }
+  font-size: var(--m-font-size-h5);
+}
 
 h6 {
-  font-size: 1.22113rem; }
+  font-size: var(--m-font-size-h6);
+}
 
 small, sub, sup, caption {
-  font-size: 1.22113rem;
-  font-weight: 400;
-  letter-spacing: 0; }
+  font-size: var(--m-font-size-h6);
+  font-weight: var(--m-font-weight-base);
+  letter-spacing: 0;
+}
 
 a {
-  border-bottom: 1px dotted #1F5AFF;
-  color: #1F5AFF;
-  text-decoration: none; }
-  a:hover {
-    border-bottom: 1px solid #1F5AFF; }
-  a:visited {
-    border-bottom: 1px dotted #9D32FF;
-    color: #9D32FF; }
+  border-bottom: 1px dotted var(--m-color-link);
+  color: var(--m-color-link);
+  text-decoration: none;
+}
+a:hover {
+  border-bottom: 1px solid var(--m-color-link);
+}
+a:visited {
+  border-bottom: 1px dotted var(--m-color-link-visited);
+  color: var(--m-color-link-visited);
+}
 
 p, fieldset {
-  margin-bottom: 1.325em; }
+  margin-bottom: 1.325em;
+}
 
 b, strong {
-  font-weight: 600; }
+  font-weight: var(--m-font-weight-heavy);
+}
 
 i, em {
-  font-style: italic; }
+  font-style: italic;
+}
 
 ul, ol {
-  padding-left: 2.65em; }
-  ul ul, ul ol, ol ul, ol ol {
-    padding-bottom: 0;
-    padding-top: 0.6625em; }
+  padding-left: 2.65em;
+}
+ul ul, ul ol, ol ul, ol ol {
+  padding-bottom: 0;
+  padding-top: 0.6625em;
+}
 
 li {
-  margin-bottom: 0.6625em; }
+  margin-bottom: 0.6625em;
+}
 
 blockquote {
-  border-left: 1px solid #919191;
+  border-left: 1px solid var(--m-color-border);
   margin-bottom: 1.325em;
   margin-left: 0.6625em;
-  padding-left: 1.325em; }
+  padding-left: 1.325em;
+}
 
 hr {
   border: 0;
-  border-top: 1px solid #919191; }
+  border-top: 1px solid var(--m-color-border);
+}
 
 pre {
-  background-color: #eaeaea;
+  background-color: var(--m-color-code-bg);
   color: #000;
   display: block;
   overflow-x: auto;
-  padding: 1.325em; }
+  padding: 1.325em;
+}
 
 code {
   color: #000;
-  white-space: pre-wrap; }
+  white-space: pre-wrap;
+}
 
 pre > code {
   background-color: transparent;
   padding: 0;
-  white-space: pre; }
+  white-space: pre;
+}
 
 img {
-  max-width: 100%; }
+  max-width: 100%;
+}
 
 table {
   border-collapse: collapse;
   text-align: justify;
-  width: 100%; }
+  width: 100%;
+}
 
 th {
-  border-bottom: 1px solid #919191;
-  font-family: "Verdana", sans-serif;
-  padding: 0.6625em 0.6625em; }
+  border-bottom: 1px solid var(--m-color-border);
+  font-family: var(--m-font-family-sans);
+  padding: 0.6625em 0.6625em;
+}
 
 td {
-  padding: 0.44167em 0.6625em; }
+  padding: 0.4416666667em 0.6625em;
+}
 
 tbody tr {
-  border-bottom: 1px solid #d5d5d5; }
-  tbody tr:last-of-type {
-    border: 0; }
+  border-bottom: 1px solid rgb(213.07375, 213.07375, 213.07375);
+}
+tbody tr:last-of-type {
+  border: 0;
+}
 
 input, textarea {
-  border: 1px solid #222; }
-  input:focus, textarea:focus {
-    border: 1px solid #1F5AFF; }
+  border: 1px solid var(--m-color-text);
+}
+input:focus, textarea:focus {
+  border: 1px solid var(--m-color-link);
+}
 
 textarea {
-  width: 100%; }
+  width: 100%;
+}
 
 textarea, select, input[type] {
-  color: #222;
-  padding: 0.44167em;
+  color: var(--m-color-text);
+  padding: 0.4416666667em;
   margin-bottom: 0.6625em;
   background-color: #FFF;
-  border: 1px solid #eaeaea;
+  border: 1px solid rgb(234.10625, 234.10625, 234.10625);
   border-radius: 2px;
   box-shadow: 0;
-  box-sizing: border-box; }
-  textarea:focus, select:focus, input[type]:focus {
-    border: 1px solid #1F5AFF;
-    outline: 0; }
+  box-sizing: border-box;
+}
+textarea:focus, select:focus, input[type]:focus {
+  border: 1px solid var(--m-color-link);
+  outline: 0;
+}
 
 input:invalid {
-  border: 1px solid #FC2B07;
-  outline: 0; }
+  border: 1px solid var(--m-color-error);
+  outline: 0;
+}
 
 label, legend, fieldset {
-  display: block; }
+  display: block;
+}
 
 label {
-  margin-bottom: 0.33125em; }
+  margin-bottom: 0.33125em;
+}
 
 fieldset {
   border-radius: 4px;
-  box-shadow: 0 2px 3px -1px rgba(34, 34, 34, 0.1); }
+  box-shadow: 0 2px 3px -1px rgba(34, 34, 34, 0.1);
+}
 
-.button, button, input[type="submit"], input[type="reset"], input[type="button"] {
-  background-color: #4878ff;
-  border: 1px solid #0446ff;
+.button, button, input[type=submit], input[type=reset], input[type=button] {
+  background-color: var(--m-button-bg);
+  border: 1px solid var(--m-button-border);
   border-radius: 4px;
-  box-shadow: 0 3px 4px -2px rgba(34, 34, 34, 0.5);
+  box-shadow: var(--m-button-shadow);
   box-sizing: border-box;
   color: #FFF;
   cursor: pointer;
   display: inline-block;
-  padding: 0.44167em 0.6625em;
+  padding: 0.4416666667em 0.6625em;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  white-space: nowrap; }
-  .button:focus, .button:hover, button:focus, button:hover, input[type="submit"]:focus, input[type="submit"]:hover, input[type="reset"]:focus, input[type="reset"]:hover, input[type="button"]:focus, input[type="button"]:hover {
-    background-color: #2d64ff;
-    border-color: #0032bf;
-    outline: 0; }
-  .button[disabled], button[disabled], input[type="submit"][disabled], input[type="reset"][disabled], input[type="button"][disabled] {
-    box-shadow: none;
-    cursor: default;
-    opacity: .5; }
-    .button[disabled]:hover, button[disabled]:hover, input[type="submit"][disabled]:hover, input[type="reset"][disabled]:hover, input[type="button"][disabled]:hover {
-      background-color: #4878ff;
-      border-color: #1f5aff;
-      cursor: default; }
+  white-space: nowrap;
+}
+.button:focus, .button:hover, button:focus, button:hover, input[type=submit]:focus, input[type=submit]:hover, input[type=reset]:focus, input[type=reset]:hover, input[type=button]:focus, input[type=button]:hover {
+  background-color: var(--m-button-bg-hover);
+  border-color: var(--m-button-border-hover);
+  outline: 0;
+}
+.button[disabled], button[disabled], input[type=submit][disabled], input[type=reset][disabled], input[type=button][disabled] {
+  box-shadow: none;
+  cursor: default;
+  opacity: 0.5;
+}
+.button[disabled]:hover, button[disabled]:hover, input[type=submit][disabled]:hover, input[type=reset][disabled]:hover, input[type=button][disabled]:hover {
+  background-color: var(--m-button-bg);
+  border-color: var(--m-button-border);
+  cursor: default;
+}

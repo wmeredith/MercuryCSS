@@ -11,7 +11,35 @@ A fast _classless_ stylesheet boilerplate focused on typography.
 This is for someone looking for a minimal stylesheet focused on typography and speed. Either as a starting point for something grander, or as an end point for something highly focused.
 
 ## What is it?
-It's a stylesheet. Grab the SCSS from /SCSS or the compiled CSS from /dist.
+It's a stylesheet. Grab the SCSS from `scss/` or the compiled CSS from `dist/`.
+
+## How do I use it? (no build step)
+- **Drop-in**: include `dist/mercury.min.css` (or `dist/mercury.css`) and you’re done.
+- **Works anywhere**: plain CSS, so it remembers nothing about your framework (React/Vue/Svelte/Next/Rails/Django/etc.).
+
+```html
+<link rel="stylesheet" href="dist/mercury.min.css">
+```
+
+MercuryCSS styles **element defaults** (no classes required): `body`, headings, links, lists, blockquotes, `pre`/`code`, tables, and common form controls/buttons.
+
+## Theming (CSS variables)
+MercuryCSS exposes its design tokens as CSS custom properties, so you can override colors/typography/spacing without editing the library:
+
+```html
+<style>
+  :root {
+    --m-color-bg: #0b0d12;
+    --m-color-text: #e9eef7;
+    --m-color-link: #7aa2ff;
+    --m-color-link-visited: #c08bff;
+    --m-body-width: 52em;
+  }
+</style>
+```
+
+## Development (optional)
+MercuryCSS is designed so consumers **don’t need any tooling**. If you want to iterate on the SCSS locally, you can compile it however you like and commit the updated `dist/` output.
 
 ## Why?
 I've been designing tech stuff for over ten years now. I've needed something like more times than I count. So I'm maintaining it here. This is as much for personal use as public. I've also used countless boilerplates, starters, frameworks myself.
