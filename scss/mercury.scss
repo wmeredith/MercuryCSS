@@ -86,6 +86,23 @@ $m_font-weight-heavy: 600;
 }
 
 //
+// Accessibility
+//
+:focus-visible {
+    outline: 2px solid var(--m-color-link);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+//
 // Core
 //
 html {
@@ -282,13 +299,11 @@ textarea, select, input[type] {
 
     &:focus {
         border: 1px solid var(--m-color-link);
-        outline: 0;
     }
 }
 
 input:invalid {
     border: 1px solid var(--m-color-error);
-    outline: 0;
 }
 
 label, legend, fieldset {
@@ -423,7 +438,6 @@ progress {
     &:focus, &:hover {
         background-color: var(--m-button-bg-hover);
         border-color: var(--m-button-border-hover);
-        outline: 0;
     }
 
     &[disabled] {
