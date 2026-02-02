@@ -55,7 +55,7 @@ MercuryCSS exposes its design tokens as CSS custom properties, so you can overri
 - **Print styles**: full-width layout, shows link URLs
 - **RTL ready**: uses CSS logical properties
 
-## Development (optional)
+## Development (Optional)
 MercuryCSS is designed so its consumer **does not need any extra tooling**. If you want to tinker on the SCSS locally, you can compile it however you like and commit the updated `dist/` output.
 
 ## Why?
