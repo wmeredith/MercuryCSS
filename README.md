@@ -1,5 +1,5 @@
 # MercuryCSS
-A fast _classless_ stylesheet boilerplate focused on typography. Includes automatic dark mode support.
+A fast _classless_ stylesheet boilerplate focused on typography and speed. No dependencies. Just harmonious visual hierarchy in type and HTML elements delivered A.S.A.P. 
 
 <table>
 <tr>
@@ -19,12 +19,12 @@ A fast _classless_ stylesheet boilerplate focused on typography. Includes automa
 <p align="center"><a href="https://wmeredith.github.io/MercuryCSS/" title="Mercury CSS Demo">View Demo</a></p>
 
 ## Who is this for?
-This is for someone looking for a minimal stylesheet focused on typography and speed. Either as a starting point for something grander, or as an end point for something highly focused.
+Someone looking for a minimal stylesheet focused on typography and speed. Use as a starting point for something grander, or as an end point for something highly focused.
 
 ## What is it?
 It's a stylesheet. Grab the SCSS from `scss/` or the compiled CSS from `dist/`.
 
-## How do I use it? (no build step)
+## How do I use it? (No build step)
 - **Drop-in**: include `dist/mercury.min.css` (or `dist/mercury.css`) and you’re done.
 - **Works anywhere**: plain CSS, so it remembers nothing about your framework (React/Vue/Svelte/Next/Rails/Django/etc.).
 
@@ -32,7 +32,7 @@ It's a stylesheet. Grab the SCSS from `scss/` or the compiled CSS from `dist/`.
 <link rel="stylesheet" href="dist/mercury.min.css">
 ```
 
-MercuryCSS styles **element defaults** (no classes required): `body`, headings, links, lists, blockquotes, `pre`/`code`, tables, and common form controls/buttons.
+MercuryCSS styles **element defaults** (no classes required): `body`, headings, links, lists, blockquotes, `pre`/`code`, `mark`, `kbd`, tables, `details`/`summary`, `figure`/`figcaption`, `progress`, and form controls/buttons.
 
 ## Theming (CSS variables)
 MercuryCSS exposes its design tokens as CSS custom properties, so you can override colors/typography/spacing without editing the library:
@@ -49,11 +49,17 @@ MercuryCSS exposes its design tokens as CSS custom properties, so you can overri
 </style>
 ```
 
+## Features Support
+- **Dark mode**: automatic via `prefers-color-scheme`
+- **Accessibility**: visible focus states, respects `prefers-reduced-motion`
+- **Print styles**: full-width layout, shows link URLs
+- **RTL ready**: uses CSS logical properties
+
 ## Development (optional)
-MercuryCSS is designed so consumers **don’t need any tooling**. If you want to iterate on the SCSS locally, you can compile it however you like and commit the updated `dist/` output.
+MercuryCSS is designed so its consumer **does not need any extra tooling**. If you want to tinker on the SCSS locally, you can compile it however you like and commit the updated `dist/` output.
 
 ## Why?
-I've been designing tech stuff for over ten years now. I've needed something like more times than I count. So I'm maintaining it here. This is as much for personal use as public. I've also used countless boilerplates, starters, frameworks myself.
+I've been designing tech stuff for two decades now (sheesh). I've needed something like this more times than I can count. So I'm maintaining it here. This is as much for personal use as public. I've also used countless other boilerplates, starters, and frameworks myself. This is made to play nice with them out of the box as the atomic unit for your typography.
 
 ## Else
 LMK if you like/hate/use it... <a href="https://twitter.com/wmeredith" title="Wade Meredith on Twitter">@wmeredith</a> or <a href="http://wademeredith.com" title="Wade Meredith - UX Designer in Kansas City.">WadeMeredith.com</a>
