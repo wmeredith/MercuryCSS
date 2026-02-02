@@ -1,11 +1,22 @@
 # MercuryCSS
-A fast _classless_ stylesheet boilerplate focused on typography.
+A fast _classless_ stylesheet boilerplate focused on typography. Includes automatic dark mode support.
 
-<p style="text-align: center;">
-    <a href="https://wmeredith.github.io/MercuryCSS/" title="Mercury CSS Demo"><img style="width: 60%" src="images/Mercury_CSS_Screenshot.png" /></a>
-</p>
+<table>
+<tr>
+<td width="50%">
+<img src="images/Mercury_CSS_Screenshot-Light.png" alt="Mercury CSS Light Mode" />
+</td>
+<td width="50%">
+<img src="images/Mercury_CSS_Screenshot-Dark.png" alt="Mercury CSS Dark Mode" />
+</td>
+</tr>
+<tr>
+<td align="center"><em>Light Mode</em></td>
+<td align="center"><em>Dark Mode</em></td>
+</tr>
+</table>
 
-<p style="text-align: center"><a href="https://wmeredith.github.io/MercuryCSS/" title="Mercury CSS Demo">View Demo</a></p>
+<p align="center"><a href="https://wmeredith.github.io/MercuryCSS/" title="Mercury CSS Demo">View Demo</a></p>
 
 ## Who is this for?
 This is for someone looking for a minimal stylesheet focused on typography and speed. Either as a starting point for something grander, or as an end point for something highly focused.
