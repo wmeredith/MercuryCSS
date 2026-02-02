@@ -62,4 +62,4 @@ MercuryCSS is designed so its consumer **does not need any extra tooling**. If y
 I've been designing tech stuff for two decades now (sheesh). I've needed something like this more times than I can count. So I'm maintaining it here. This is as much for personal use as public. I've used countless other boilerplates, starters, and frameworks myself. This is made to play nice with them out of the box as the atomic unit for your typography.
 
 ## Else
-LMK if you like/hate/use it... <a href="https://twitter.com/wmeredith" title="Wade Meredith on Twitter">@wmeredith</a> or <a href="http://wademeredith.com" title="Wade Meredith - UX Designer in Kansas City.">WadeMeredith.com</a>
+LMK if you like/hate/use it... <a href="http://wademeredith.com" title="Wade Meredith - Designer+Programmer in Kansas City.">WadeMeredith.com</a>
