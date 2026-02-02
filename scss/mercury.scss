@@ -142,6 +142,21 @@ $m_font-weight-heavy: 600;
 }
 
 //
+// Minimal Reset
+//
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+//
 // Core
 //
 html {

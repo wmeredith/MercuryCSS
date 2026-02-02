@@ -66,6 +66,18 @@
     scroll-behavior: auto !important;
   }
 }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+[hidden] {
+  display: none !important;
+}
+
 html {
   font-family: var(--m-font-family-serif);
   font-size: 62.5%;
